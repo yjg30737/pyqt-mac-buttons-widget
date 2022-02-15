@@ -22,3 +22,7 @@ if __name__ == "__main__":
     widget.show()
     app.exec_()
 ```
+
+Result
+
+![image](https://user-images.githubusercontent.com/55078043/153992019-de4b5e29-2674-4dd0-9253-82d63daad647.png)
