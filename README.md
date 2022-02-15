@@ -7,6 +7,9 @@ PyQt macOS style of min/max/close buttons widget
 ## Setup
 ```pip3 install git+https://github.com/yjg30737/pyqt-mac-min-max-close-buttons-widget.git --upgrade```
 
+## Usage
+* ```getMinimizedBtn()```, ```getMaximizedBtn()```, ```getCloseBtn()```. I belived these three methods are quite self-explanatory.
+
 ## Example
 Code Sample
 ```python
