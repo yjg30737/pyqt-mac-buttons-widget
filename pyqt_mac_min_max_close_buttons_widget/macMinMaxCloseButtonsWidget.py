@@ -45,3 +45,12 @@ class MacMinMaxCloseButtonsWidget(QWidget):
                              '''
 
         btn.setStyleSheet(self.__macBtnStyle)
+
+    def getMinimizedBtn(self):
+        pass
+
+    def getMaximizedBtn(self):
+        pass
+
+    def getCloseBtn(self):
+        pass
