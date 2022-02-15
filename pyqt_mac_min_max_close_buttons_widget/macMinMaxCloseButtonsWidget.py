@@ -15,13 +15,9 @@ class MacMinMaxCloseButtonsWidget(QWidget):
         self.__macBtnStyle = ''
 
     def __initUi(self):
-
         closeBtn = QPushButton()
-        closeBtn.clicked.connect(self.close)
         minimizeBtn = QPushButton()
-        minimizeBtn.clicked.connect(self.showMinimized)
         maximizeBtn = QPushButton()
-        maximizeBtn.clicked.connect(self.showMaximized)
 
         lay = QHBoxLayout()
 
