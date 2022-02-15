@@ -1,0 +1,1 @@
+from .macMinMaxCloseButtonsWidget import MacMinMaxCloseButtonsWidget
