@@ -12,6 +12,7 @@ class MacMinMaxCloseButtonsWidget(QWidget):
         self.__size = 20
         self.__border_width = self.__size // 20
         self.__border_radius = self.__size // 2
+        self.__macBtnStyle = ''
 
     def __initUi(self):
 
@@ -48,12 +49,3 @@ class MacMinMaxCloseButtonsWidget(QWidget):
                              '''
 
         btn.setStyleSheet(self.__macBtnStyle)
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QApplication(sys.argv)
-    ex = MacMinMaxCloseButtonsWidget()
-    ex.show()
-    app.exec_()
