@@ -1,12 +1,13 @@
+from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor
 from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
 
 
 class MacMinMaxCloseButtonsWidget(QWidget):
-    def __init__(self):
+    def __init__(self, hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint):
         super().__init__()
         self.__initVal()
-        self.__initUi()
+        self.__initUi(hint)
 
     def __initVal(self):
         self.__size = 20
@@ -14,7 +15,7 @@ class MacMinMaxCloseButtonsWidget(QWidget):
         self.__border_radius = self.__size // 2
         self.__macBtnStyle = ''
 
-    def __initUi(self):
+    def __initUi(self, hint):
         self.__closeBtn = QPushButton()
         self.__minimizeBtn = QPushButton()
         self.__maximizeBtn = QPushButton()
@@ -29,7 +30,20 @@ class MacMinMaxCloseButtonsWidget(QWidget):
             btn = btns[i]
             btn.setFixedSize(self.__size, self.__size)
             self.setStyleForEachButton(btn, colors[i])
-            lay.addWidget(btn)
+
+        if hint == Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint:
+            lay.addWidget(self.__minimizeBtn)
+            lay.addWidget(self.__maximizeBtn)
+            lay.addWidget(self.__closeBtn)
+        elif hint == Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint:
+            lay.addWidget(self.__minimizeBtn)
+            lay.addWidget(self.__closeBtn)
+        elif hint == Qt.WindowCloseButtonHint:
+            lay.addWidget(self.__closeBtn)
+        else:
+            # todo for another type of flags
+            pass
+
         self.setLayout(lay)
 
     def setStyleForEachButton(self, btn, color):
