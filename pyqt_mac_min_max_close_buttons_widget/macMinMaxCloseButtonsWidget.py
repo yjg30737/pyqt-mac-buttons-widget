@@ -15,11 +15,11 @@ class MacMinMaxCloseButtonsWidget(QWidget):
         self.__border_radius = self.__size // 2
         self.__macBtnStyle = ''
 
-    def __initUi(self, hint):
         self.__closeBtn = QPushButton()
         self.__minimizeBtn = QPushButton()
         self.__maximizeBtn = QPushButton()
 
+    def __initUi(self, hint):
         lay = QHBoxLayout()
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(2)
