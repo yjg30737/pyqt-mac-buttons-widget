@@ -1,5 +1,5 @@
 from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton, QApplication
+from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
 
 
 class MacMinMaxCloseButtonsWidget(QWidget):
@@ -20,6 +20,8 @@ class MacMinMaxCloseButtonsWidget(QWidget):
         self.__maximizeBtn = QPushButton()
 
         lay = QHBoxLayout()
+        lay.setContentsMargins(0, 0, 0, 0)
+        lay.setSpacing(2)
 
         btns = [self.__closeBtn, self.__minimizeBtn, self.__maximizeBtn]
         colors = ['#DD0000', '#AA8800', '#008800']
@@ -45,12 +47,12 @@ class MacMinMaxCloseButtonsWidget(QWidget):
                              '''
 
         btn.setStyleSheet(self.__macBtnStyle)
-        
+
     def getMinimizedBtn(self):
         return self.__minimizeBtn
-    
+
     def getMaximizedBtn(self):
         return self.__maximizeBtn
-    
+
     def getCloseBtn(self):
         return self.__closeBtn
