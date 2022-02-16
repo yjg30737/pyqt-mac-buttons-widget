@@ -1,9 +1,10 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QWidget, QHBoxLayout, QPushButton
+from PyQt5.QtWidgets import QHBoxLayout
+from pyqt_min_max_close_buttons import MinMaxCloseButtonsWidget
 
 
-class MacMinMaxCloseButtonsWidget(QWidget):
+class MacMinMaxCloseButtonsWidget(MinMaxCloseButtonsWidget):
     def __init__(self, hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint):
         super().__init__()
         self.__initVal()
@@ -15,36 +16,17 @@ class MacMinMaxCloseButtonsWidget(QWidget):
         self.__border_radius = self.__size // 2
         self.__macBtnStyle = ''
 
-        self.__closeBtn = QPushButton()
-        self.__minimizeBtn = QPushButton()
-        self.__maximizeBtn = QPushButton()
-
     def __initUi(self, hint):
         lay = QHBoxLayout()
         lay.setContentsMargins(0, 0, 0, 0)
         lay.setSpacing(2)
 
-        btns = [self.__closeBtn, self.__minimizeBtn, self.__maximizeBtn]
+        btns = [self._closeBtn, self._minimizeBtn, self._maximizeBtn]
         colors = ['#DD0000', '#AA8800', '#008800']
         for i in range(len(btns)):
             btn = btns[i]
             btn.setFixedSize(self.__size, self.__size)
             self.setStyleForEachButton(btn, colors[i])
-
-        if hint == Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint:
-            lay.addWidget(self.__minimizeBtn)
-            lay.addWidget(self.__maximizeBtn)
-            lay.addWidget(self.__closeBtn)
-        elif hint == Qt.WindowMinimizeButtonHint | Qt.WindowCloseButtonHint:
-            lay.addWidget(self.__minimizeBtn)
-            lay.addWidget(self.__closeBtn)
-        elif hint == Qt.WindowCloseButtonHint:
-            lay.addWidget(self.__closeBtn)
-        else:
-            # todo for another type of flags
-            pass
-
-        self.setLayout(lay)
 
     def setStyleForEachButton(self, btn, color):
         border_color = QColor(color)
@@ -63,10 +45,10 @@ class MacMinMaxCloseButtonsWidget(QWidget):
         btn.setStyleSheet(self.__macBtnStyle)
 
     def getMinimizedBtn(self):
-        return self.__minimizeBtn
+        return self._minimizeBtn
 
     def getMaximizedBtn(self):
-        return self.__maximizeBtn
+        return self._maximizeBtn
 
     def getCloseBtn(self):
-        return self.__closeBtn
+        return self._closeBtn
