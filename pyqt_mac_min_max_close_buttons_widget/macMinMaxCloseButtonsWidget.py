@@ -17,9 +17,7 @@ class MacMinMaxCloseButtonsWidget(MinMaxCloseButtonsWidget):
         self.__macBtnStyle = ''
 
     def __initUi(self, hint):
-        lay = QHBoxLayout()
-        lay.setContentsMargins(0, 0, 0, 0)
-        lay.setSpacing(2)
+        self.layout().setSpacing(0)
 
         btns = [self._closeBtn, self._minimizeBtn, self._maximizeBtn]
         colors = ['#DD0000', '#AA8800', '#008800']
