@@ -1,6 +1,5 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor
-from PyQt5.QtWidgets import QHBoxLayout
 from pyqt_min_max_close_buttons_widget import MinMaxCloseButtonsWidget
 
 
@@ -32,7 +31,7 @@ class MacMinMaxCloseButtonsWidget(MinMaxCloseButtonsWidget):
         background_color_name = border_color.lighter().name()
 
         self.__macBtnStyle = f'''
-                             QPushButton
+                             QToolButton
                              {{ 
                              background-color: {background_color_name};
                              border: {self.__border_width} solid {border_color_name};
