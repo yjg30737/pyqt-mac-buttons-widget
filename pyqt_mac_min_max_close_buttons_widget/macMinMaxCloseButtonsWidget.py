@@ -43,12 +43,3 @@ class MacMinMaxCloseButtonsWidget(MinMaxCloseButtonsWidget):
                              '''
 
         btn.setStyleSheet(self.__macBtnStyle)
-
-    def getMinimizedBtn(self):
-        return self._minimizeBtn
-
-    def getMaximizedBtn(self):
-        return self._maximizeBtn
-
-    def getCloseBtn(self):
-        return self._closeBtn
