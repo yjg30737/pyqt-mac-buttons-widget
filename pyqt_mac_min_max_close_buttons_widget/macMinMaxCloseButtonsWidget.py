@@ -5,7 +5,7 @@ from pyqt_min_max_close_buttons_widget import MinMaxCloseButtonsWidget
 
 class MacMinMaxCloseButtonsWidget(MinMaxCloseButtonsWidget):
     def __init__(self, hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint):
-        super().__init__()
+        super().__init__(hint)
         self.__initVal()
         self.__initUi(hint)
 
