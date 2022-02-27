@@ -31,7 +31,7 @@ class MacMinMaxCloseButtonsWidget(MinMaxCloseButtonsWidget):
         background_color_name = border_color.lighter().name()
 
         self.__macBtnStyle = f'''
-                             QToolButton
+                             QPushButton
                              {{ 
                              background-color: {background_color_name};
                              border: {self.__border_width} solid {border_color_name};
