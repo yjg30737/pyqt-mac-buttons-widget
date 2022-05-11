@@ -1,1 +1,1 @@
-git+https://git@github.com/yjg30737/pyqt-min-max-close-buttons-widget.git@main
+git+https://git@github.com/yjg30737/pyqt-titlebar-buttons-widget.git@main

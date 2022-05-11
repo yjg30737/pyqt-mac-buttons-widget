@@ -1,9 +1,9 @@
 from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor
-from pyqt_min_max_close_buttons_widget import MinMaxCloseButtonsWidget
+from pyqt_titlebar_buttons_widget import TitlebarButtonsWidget
 
 
-class MacMinMaxCloseButtonsWidget(MinMaxCloseButtonsWidget):
+class MacMinMaxCloseButtonsWidget(TitlebarButtonsWidget):
     def __init__(self, hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint):
         super().__init__(hint)
         self.__initVal()
