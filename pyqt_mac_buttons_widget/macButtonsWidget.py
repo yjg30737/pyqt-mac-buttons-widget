@@ -3,7 +3,7 @@ from PyQt5.QtGui import QColor
 from pyqt_titlebar_buttons_widget import TitlebarButtonsWidget
 
 
-class MacMinMaxCloseButtonsWidget(TitlebarButtonsWidget):
+class MacButtonsWidget(TitlebarButtonsWidget):
     def __init__(self, hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint):
         super().__init__(hint)
         self.__initVal()
