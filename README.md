@@ -5,14 +5,14 @@ PyQt macOS style of titlebar buttons (e.g. min/max/close) widget
 * PyQt5 >= 5.8
 
 ## Setup
-```pip3 install git+https://github.com/yjg30737/pyqt-mac-min-max-close-buttons-widget.git --upgrade```
+`python -m pip install pyqt-mac-buttons-widget`
 
 ## Included Package
 * <a href="https://github.com/yjg30737/pyqt-titlebar-buttons-widget.git">pyqt-titlebar-buttons-widget</a> - Parent widget
 
 ## Usage
-* ```MacButtonsWidget(hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint)``` - Constructor.
-* ```getMinimizedBtn()```, ```getMaximizedBtn()```, ```getCloseBtn()```. I belive these three methods are quite self-explanatory.
+* `MacButtonsWidget(hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint)` - Constructor.
+* `getMinimizedBtn()`, `getMaximizedBtn()`, `getCloseBtn()`. I belive these three methods are quite self-explanatory.
 * This module is used for <a href="https://github.com/yjg30737/pyqt-custom-titlebar-window.git">pyqt-custom-titlebar-window</a>'s macOS style button. You can see the example of this module's usage on the documentation at the link above.. later.
 
 ## Example
