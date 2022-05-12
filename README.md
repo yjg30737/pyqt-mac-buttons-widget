@@ -1,5 +1,5 @@
-# pyqt-mac-min-max-close-buttons-widget
-PyQt macOS style of min/max/close buttons widget 
+# pyqt-mac-buttons-widget
+PyQt macOS style of titlebar buttons (e.g. min/max/close) widget 
 
 ## Requirements
 * PyQt5 >= 5.8
