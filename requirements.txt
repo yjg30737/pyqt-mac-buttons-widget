@@ -1,1 +1,1 @@
-git+https://git@github.com/yjg30737/pyqt-titlebar-buttons-widget.git@main
+pyqt-titlebar-buttons-widget>=0.0.1

@@ -11,6 +11,6 @@ setup(
     url='https://github.com/yjg30737/pyqt-mac-min-max-close-buttons-widget.git',
     install_requires=[
         'PyQt5>=5.8',
-        'pyqt-titlebar-buttons-widget @ git+https://git@github.com/yjg30737/pyqt-titlebar-buttons-widget.git@main'
+        'pyqt-titlebar-buttons-widget>=0.0.1'
     ]
 )
