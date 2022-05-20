@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/pyqt_mac_min_max_close_buttons_widget.iml" filepath="$PROJECT_DIR$/.idea/pyqt_mac_min_max_close_buttons_widget.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/pyqt_mac_buttons_widget.iml" filepath="$PROJECT_DIR$/.idea/pyqt_mac_buttons_widget.iml" />
     </modules>
   </component>
 </project>

@@ -1,13 +1,12 @@
-from PyQt5.QtCore import Qt
 from PyQt5.QtGui import QColor
 from pyqt_titlebar_buttons_widget import TitlebarButtonsWidget
 
 
 class MacButtonsWidget(TitlebarButtonsWidget):
-    def __init__(self, hint=Qt.WindowMinMaxButtonsHint | Qt.WindowCloseButtonHint):
-        super().__init__(hint)
+    def __init__(self, base_widget, hint=['min', 'max', 'close']):
+        super().__init__(base_widget, hint)
         self.__initVal()
-        self.__initUi(hint)
+        self.__initUi()
 
     def __initVal(self):
         self.__size = 20
@@ -15,9 +14,7 @@ class MacButtonsWidget(TitlebarButtonsWidget):
         self.__border_radius = self.__size // 2
         self.__macBtnStyle = ''
 
-    def __initUi(self, hint):
-        self.layout().setSpacing(2)
-
+    def __initUi(self):
         btns = [self._closeBtn, self._minimizeBtn, self._maximizeBtn]
         colors = ['#DD0000', '#AA8800', '#008800']
         for i in range(len(btns)):
