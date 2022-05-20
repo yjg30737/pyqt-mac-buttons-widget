@@ -19,15 +19,14 @@ PyQt macOS style of titlebar buttons (e.g. min/max/close) widget
 This example is just to show how it looks.
 
 ```python
-from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtWidgets import QApplication
 from pyqt_mac_buttons_widget import MacButtonsWidget
 
 if __name__ == "__main__":
     import sys
 
     app = QApplication(sys.argv)
-    mainWindow = QMainWindow()
-    widget = MacButtonsWidget(mainWindow)
+    widget = MacButtonsWidget()
     widget.show()
     app.exec_()
 ```
