@@ -3,7 +3,7 @@ from pyqt_titlebar_buttons_widget import TitlebarButtonsWidget
 
 
 class MacButtonsWidget(TitlebarButtonsWidget):
-    def __init__(self, base_widget, hint=['min', 'max', 'close']):
+    def __init__(self, base_widget=None, hint=['min', 'max', 'close']):
         super().__init__(base_widget, hint)
         self.__initVal()
         self.__initUi()
