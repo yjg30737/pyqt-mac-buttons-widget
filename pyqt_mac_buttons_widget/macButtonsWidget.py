@@ -9,12 +9,13 @@ class MacButtonsWidget(TitlebarButtonsWidget):
         self.__initUi()
 
     def __initVal(self):
-        self.__size = 20
+        self.__size = 15
         self.__border_width = self.__size // 20
         self.__border_radius = self.__size // 2
         self.__macBtnStyle = ''
 
     def __initUi(self):
+        self.layout().setSpacing(2)
         btns = [self._closeBtn, self._minimizeBtn, self._maximizeBtn]
         colors = ['#DD0000', '#AA8800', '#008800']
         for i in range(len(btns)):
