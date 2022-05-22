@@ -23,6 +23,9 @@ class MacButtonsWidget(TitlebarButtonsWidget):
             btn.setFixedSize(self.__size, self.__size)
             self.__setStyleForEachButton(btn, colors[i])
 
+    def _styleInit(self):
+        pass
+
     def __setStyleForEachButton(self, btn, color):
         border_color = QColor(color)
         border_color_name = border_color.name()
