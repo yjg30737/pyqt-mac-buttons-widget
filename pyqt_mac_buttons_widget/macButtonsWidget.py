@@ -9,7 +9,7 @@ class MacButtonsWidget(TitlebarButtonsWidget):
         self.__initUi()
 
     def __initVal(self):
-        self.__size = 15
+        self.__size = 17
         self.__border_width = self.__size // 20
         self.__border_radius = self.__size // 2
         self.__macBtnStyle = ''
